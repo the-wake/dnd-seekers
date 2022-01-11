@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D&D Monster Challenge Rating Search</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/css/foundation.min.css"
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <header>
+
+        <div class="title-bar">
+            <div class="title-bar-left">
+                <div>
+                    <a href="index.html">
+                        <img class="header-logo" src="assets/images/icons/spiked-dragon-head (2).svg">
+                    </a>
+                    <h1 class="title-bar-title">D&D Seekers</h1>
+                </div>
+            </div>
+
+            <div class="title-bar-right">
+                <p>Made with Open5e API</p>
+                <ul class="dropdown menu align-right menu-icon" id="drop" data-dropdown-menu>
+
+                    <li class="is-dropdown-submenu-parent">
+
+                        <a href="#"></a>
+                        <ul class="menu imgOfBack dropImage" id="backdrop">
+                            <li><a href="https://open5e.com/" target="blank">Open5e API Page</a></li>
+                            <li><a href="https://spoonacular.com/food-api/docs" target="blank">Spoonacular Page</a></li>
+                            <li><a href="https://github.com/the-wake/project-1-dnd" target="blank">GitHub</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="jumbotron" class="callout large primary ">
+        <div class="row column text-center">
+            <h1 id="jumbo-header-text">Where you can find...</h1>
+            <h2 id="jumbo-header-subtext" class="subheader">Monster challenge ratings and more!</h2>
+        </div>
+    </div>
+
+    <main>
+
+        <div id="searchBars">
+
+            <form id="monsterForm">
+                <div class="callout secondary">
+                    <label for="cr">
+                        <h5>Choose Challenge Rating:</h5>
+                    </label>
+                    <select id="crEnter" name="Challenge Rating">
+                        <option value="0">0</option>
+                        <option value="1/8">1/8</option>
+                        <option value="1/4">1/4</option>
+                        <option value="1/2">1/2</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                    </select>
+                    <button type="button" class="button" id="searchBtn">Search</button>
+                </div>
+            </form>
+
+            <form id="foodForm">
+                <div class="callout secondary calloutstyle">
+                    <label for="snack">
+                        <h5>Search a snack!!</h5>
+                    </label>
+                    <input type="text" id="foodSearch" placeholder="Type a food to get a food!">
+                    <button type="button" class="subBtn button">Submit</button><br>
+                    <img id="img1"></img>
+                    <p>It's dangerous to go alone, take this.</p>
+                </div>
+            </form>
+
+            <div class="callout secondary">
+                <h5 class="text-center">Saved Monsters</h5>
+                <p class="text-center">(Click an item to remove it from the list)</p>
+                <ul id="save-history" class="list-group">
+                </ul>
+            </div>
+
+        </div>
+
+        <section class="results-screen row">
+            <div class="columns large-12 medium-12" id="results-container">
+                <h3 id="top-display">Select a Challenge Rating to begin your search</h3>
+                <div class="lead menu align-center" id="monster-list">
+                </div>
+                <div id="pag-spot"></div>
+                <br>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.4/dist/js/foundation.min.js"
+        crossorigin="anonymous"></script>
+    <script src="assets/javascript/script.js"></script>
+    <script src="assets/javascript/secondapi.js"></script>
+</body>
+
+</html>
